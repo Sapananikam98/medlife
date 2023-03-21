@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNfoundComponent } from './components/page-nfound/page-nfound.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -10,14 +14,22 @@ import { PageNfoundComponent } from './components/page-nfound/page-nfound.compon
   declarations: [
     HeaderComponent,
     FooterComponent,
-    PageNfoundComponent
+    PageNfoundComponent,
+    SignInComponent,
+    SignupComponent,
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports:[
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SignInComponent,
+    SignupComponent
   ]
 })
 export class CoreModule { }

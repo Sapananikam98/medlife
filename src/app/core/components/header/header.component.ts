@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  actionName:string="SignIn"
+  constructor() { }
 
+  ngOnInit(): void {
+  }
+
+  changeAction(action:string){
+    this.actionName = action ;
+  }
 }
